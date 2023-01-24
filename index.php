@@ -23,13 +23,13 @@
             $this->lenguage = $lenguage;
         }
 
-        // public function getfullMovie()
-        // {
-        //     return $this->title .
-        //         $this->length .
-        //         $this->lenguage;
-        // }
-    
+        public function getfullMovie()
+        {
+            return $this->title .
+                $this->length .
+                $this->lenguage;
+        }
+
         public function getHtml()
         {
             return "Movie: " . $this->title .
@@ -39,26 +39,26 @@
 
     }
 
-    $movie1 = new Movie("Avatar", "125", "Eng");
-    $movie2 = new Movie("The Lord Of the Rings", "230", "Eng");
-    $movie3 = new Movie("Tre uomini e una gamba", "90", "Ita");
-
-    echo $movie1->getHtml();
-    echo "<br><br>";
-    echo $movie2->getHtml();
-    echo "<br><br>";
-    echo $movie3->getHtml();
-
-
-    // $movies = [new Movie("Avatar", "125", "Eng"), new Movie("The Lord Of the Rings", "230", "Eng"), new Movie("Tre uomini e una gamba", "90", "Ita")];
+    // $movie1 = new Movie("Avatar", "125", "Eng");
+    // $movie2 = new Movie("The Lord Of the Rings", "230", "Eng");
+    // $movie3 = new Movie("Tre uomini e una gamba", "90", "Ita");
     
-    // foreach ($movies as $movie) {
-    //     $movie->getfullMovie();
-    // }
+    // echo $movie1->getHtml();
+    // echo "<br><br>";
+    // echo $movie2->getHtml();
+    // echo "<br><br>";
+    // echo $movie3->getHtml();
     
-    // var_dump($movie);
+
+    $movies = [new Movie("Avatar", "125", "Eng"), new Movie("The Lord Of the Rings", "230", "Eng"), new Movie("Tre uomini e una gamba", "90", "Ita")];
+
+    foreach ($movies as $movie) {
+        foreach ($movie as $character) {
+            echo $character . "<br>";
+        }
+    }
+
     ?>
-
 
 </body>
 

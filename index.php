@@ -14,6 +14,21 @@ class Movie
         $this->movies = $movies;
     }
 
+    public function getfullMovie()
+    {
+        return $this->title .
+            $this->length .
+            $this->lenguage;
+    }
+
+    public function getEachMovie()
+    {
+        $str = "";
+        foreach ($this->movies as $movie) {
+            $str .= $movie->getfullMovie();
+        }
+    }
 }
+
 
 $movies = [new Movie("Avatar", "125", "Eng"), new Movie("The Lord Of the Rings", "230", "Eng"), new Movie("Tre uomini e una gamba", "90", "Ita")];

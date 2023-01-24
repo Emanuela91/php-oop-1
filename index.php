@@ -12,3 +12,6 @@ class Movie
         $this->lenguage = $lenguage;
     }
 }
+
+$movie1 = new Movie("Avatar", "125", "Eng");
+var_dump($movie1);

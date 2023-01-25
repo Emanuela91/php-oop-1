@@ -23,18 +23,11 @@
             $this->lenguage = $lenguage;
         }
 
-        public function getfullMovie()
-        {
-            return $this->title .
-                $this->length .
-                $this->lenguage;
-        }
-
         public function getHtml()
         {
             return "Movie: " . $this->title .
                 "<br> Length: " . $this->length .
-                "<br> Lenguage: " . $this->lenguage;
+                "<br> Lenguage: " . $this->lenguage . "<br>";
         }
 
     }
@@ -53,9 +46,7 @@
     $movies = [new Movie("Avatar", "125", "Eng"), new Movie("The Lord Of the Rings", "230", "Eng"), new Movie("Tre uomini e una gamba", "90", "Ita")];
 
     foreach ($movies as $movie) {
-        foreach ($movie as $character) {
-            echo $character . "<br>";
-        }
+        echo $movie->getHtml();
     }
 
     ?>
